@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-primary px-6 py-8 text-primary-foreground md:px-12 lg:px-20">
       <div className="mx-auto flex max-w-[90rem] flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="flex items-center gap-6">
+        <nav aria-label="Footer navigation" className="flex items-center gap-6">
           <a
             href="mailto:contact@voroapp.com"
             className="text-sm underline underline-offset-4 transition-opacity hover:opacity-80"
@@ -10,25 +10,25 @@ export function Footer() {
             Contact
           </a>
           <a
-            href="#"
+            href="/privacy-policy"
             className="text-sm underline underline-offset-4 transition-opacity hover:opacity-80"
           >
-            Privacy
+            Privacy Policy
           </a>
           <a
-            href="#"
+            href="/terms-and-conditions"
             className="text-sm underline underline-offset-4 transition-opacity hover:opacity-80"
           >
-            Terms
+            Terms and Conditions
           </a>
-        </div>
+        </nav>
 
-        <div className="flex items-center gap-4">
-          {/* Instagram */}
+        <nav aria-label="Social media links" className="flex items-center gap-4">
           <a
             href="#"
-            aria-label="Instagram"
+            aria-label="Follow Voro on Instagram"
             className="transition-opacity hover:opacity-80"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,17 +40,18 @@ export function Footer() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
             </svg>
           </a>
-          {/* TikTok */}
           <a
             href="#"
-            aria-label="TikTok"
+            aria-label="Follow Voro on TikTok"
             className="transition-opacity hover:opacity-80"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,11 +63,15 @@ export function Footer() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              aria-hidden="true"
             >
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
             </svg>
           </a>
-        </div>
+        </nav>
+      </div>
+      <div className="mx-auto mt-6 max-w-[90rem] text-center text-xs text-primary-foreground/60">
+        <p>&copy; {new Date().getFullYear()} Voro, Co. All rights reserved.</p>
       </div>
     </footer>
   );

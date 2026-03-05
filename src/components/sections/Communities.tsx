@@ -2,13 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function Communities() {
   return (
-    <section className="px-6 py-16 md:px-12 lg:px-20 lg:py-24">
+    <section aria-label="Communities using Voro" className="px-6 py-16 md:px-12 lg:px-20 lg:py-24">
       <div className="mx-auto max-w-[90rem]">
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-bold md:text-5xl">
             Built with real communities.
           </h2>
-          <p className="mt-4 text-lg italic text-primary">
+          <p className="mx-auto mt-8 max-w-[686px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">
             Local clubs and friend groups are already organizing on Voro.
           </p>
         </div>
