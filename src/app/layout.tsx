@@ -5,7 +5,7 @@ import "./globals.css";
 const redHatDisplay = Red_Hat_Display({
   variable: "--font-red-hat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 const SITE_URL = "https://voroapp.com";

@@ -1,3 +1,4 @@
+import { SiteNav } from "@/components/sections/SiteNav";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PersonalityTags } from "@/components/sections/PersonalityTags";
@@ -71,6 +72,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <SiteNav />
         <Hero />
         <HowItWorks />
         <PersonalityTags />
