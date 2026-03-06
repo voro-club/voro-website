@@ -54,7 +54,7 @@ export function Hero() {
               asChild
               className="h-12 w-[195px] rounded-[12px] border border-[#F4EFE8] bg-[#008199] px-[40px] py-[11px] text-base font-medium text-white shadow-[0_5px_5px_0_rgba(0,0,0,0.5)] hover:bg-[#006d82]"
             >
-              <a href="#" aria-label="Download the Voro app">Download the app</a>
+              <a href="https://apps.apple.com/us/app/voro-a-social-discovery-app/id6752358417?itscg=30200&itsct=apps_box_link&mttnsubad=6752358417" aria-label="Download the Voro app" target="_blank" rel="noopener noreferrer">Download the app</a>
             </Button>
             <Button
               asChild
