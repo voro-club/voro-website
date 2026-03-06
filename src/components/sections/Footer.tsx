@@ -25,7 +25,7 @@ export function Footer() {
 
         <nav aria-label="Social media links" className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://instagram.com/voro.club"
             aria-label="Follow Voro on Instagram"
             className="transition-opacity hover:opacity-80"
             rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export function Footer() {
             </svg>
           </a>
           <a
-            href="#"
+            href="https://www.tiktok.com/@voro.club"
             aria-label="Follow Voro on TikTok"
             className="transition-opacity hover:opacity-80"
             rel="noopener noreferrer"
