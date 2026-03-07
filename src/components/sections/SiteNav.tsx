@@ -74,18 +74,18 @@ export function SiteNav() {
 
   return (
     <header
-      className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 transition-opacity duration-300"
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 transition-opacity duration-300 sm:px-4 sm:pt-4"
       style={{
         opacity: navOpacity,
         pointerEvents: navOpacity < 0.02 ? "none" : "auto",
       }}
     >
       <nav
-        className={`flex items-center gap-2 rounded-full border border-border/40 bg-white px-5 py-2 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 ${
+        className={`flex max-w-[calc(100vw-24px)] min-w-0 shrink items-center gap-1 rounded-full border border-border/40 bg-white px-2 py-1.5 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 sm:max-w-none sm:gap-2 sm:px-5 sm:py-2 ${
           scrolled ? "shadow-[0_4px_24px_rgba(0,0,0,0.1)]" : ""
         }`}
       >
-        <div ref={containerRef} className="relative flex items-center gap-2">
+        <div ref={containerRef} className="relative flex min-w-0 shrink items-center gap-1 sm:gap-2">
           {/* Sliding bubble behind active link */}
           {bubbleStyle && (
             <div
@@ -121,7 +121,7 @@ export function SiteNav() {
                 href={link.href}
                 {...extraProps}
                 onClick={() => handleLinkClick(index)}
-                className={`relative z-10 rounded-full px-7 py-2.5 text-sm font-medium transition-colors duration-200 ${
+                className={`relative z-10 shrink-0 rounded-full px-3 py-2 text-xs font-medium transition-colors duration-200 sm:px-7 sm:py-2.5 sm:text-sm ${
                   isTapping ? "nav-link-tap" : ""
                 } ${
                   isActive
@@ -139,7 +139,7 @@ export function SiteNav() {
           href={APP_STORE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-1 rounded-full border border-[#F4EFE8] bg-[#008199] px-7 py-2.5 text-sm font-semibold text-white shadow-[0_5px_5px_0_rgba(0,0,0,0.5)] transition-transform duration-150 active:scale-95 hover:bg-[#006d82]"
+          className="ml-0.5 shrink-0 rounded-full border border-[#F4EFE8] bg-[#008199] px-3 py-2 text-xs font-semibold text-white shadow-[0_5px_5px_0_rgba(0,0,0,0.5)] transition-transform duration-150 active:scale-95 hover:bg-[#006d82] sm:ml-1 sm:px-7 sm:py-2.5 sm:text-sm"
         >
           Download
         </a>

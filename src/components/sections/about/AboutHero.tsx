@@ -48,7 +48,7 @@ function Typewriter() {
   }, []);
 
   return (
-    <span className="inline-block border-r-[3px] border-white/60 pr-1 align-bottom whitespace-nowrap italic text-white/75">
+    <span className="block w-full align-bottom italic text-white/75 wrap-break-word sm:whitespace-nowrap">
       {display}
     </span>
   );
@@ -85,13 +85,13 @@ export function AboutHero() {
         }`}
       >
       <ScrollReveal>
-        <div className="relative z-10 max-w-[720px]">
+        <div className="relative z-10 min-w-0 max-w-full sm:max-w-[1100px]">
           <span className="mb-5 inline-block text-sm font-extrabold uppercase tracking-[2px] text-white/65">
             Our Story
           </span>
-          <h1 className="text-[clamp(42px,6vw,68px)] leading-[1.1] font-extrabold text-white">
+          <h1 className="max-w-full wrap-break-word text-[clamp(22px,7vw,68px)] leading-[1.2] font-extrabold text-white sm:text-[clamp(32px,6vw,68px)]">
             Built from the shared experience of
-            <span className="mt-2 block">
+            <span className="mt-2 block w-full min-w-0">
               <Typewriter />
             </span>
           </h1>
