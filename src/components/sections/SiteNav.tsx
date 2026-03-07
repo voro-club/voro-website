@@ -7,10 +7,12 @@ import { usePathname } from "next/navigation";
 const APP_STORE_URL =
   "https://apps.apple.com/us/app/voro-a-social-discovery-app/id6752358417?itscg=30200&itsct=apps_box_link&mttnsubad=6752358417";
 
+const CONTACT_EMAIL = "hello@voro.club";
+
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "mailto:contact@voroapp.com", label: "Contact", external: true },
+  { href: `mailto:${CONTACT_EMAIL}`, label: "Contact", external: true },
 ];
 
 const FADE_SCROLL_RANGE = 180; // px over which nav fades out
@@ -23,6 +25,7 @@ export function SiteNav() {
   const containerRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<(HTMLAnchorElement | HTMLDivElement | null)[]>([]);
   const [tapIndex, setTapIndex] = useState<number | null>(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -72,6 +75,17 @@ export function SiteNav() {
     return () => clearTimeout(t);
   };
 
+  const handleContactClick = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      setCopiedEmail(true);
+      const t = setTimeout(() => setCopiedEmail(false), 2000);
+      return () => clearTimeout(t);
+    } catch {
+      // fallback: mailto still opens
+    }
+  };
+
   return (
     <header
       className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 transition-opacity duration-300 sm:px-4 sm:pt-4"
@@ -112,6 +126,8 @@ export function SiteNav() {
 
             const isTapping = tapIndex === index;
 
+            const isContact = link.external && link.href.startsWith("mailto:");
+
             return (
               <Comp
                 key={link.href}
@@ -120,7 +136,10 @@ export function SiteNav() {
                 }}
                 href={link.href}
                 {...extraProps}
-                onClick={() => handleLinkClick(index)}
+                onClick={() => {
+                  handleLinkClick(index);
+                  if (isContact) void handleContactClick();
+                }}
                 className={`relative z-10 shrink-0 rounded-full px-3 py-2 text-xs font-medium transition-colors duration-200 sm:px-7 sm:py-2.5 sm:text-sm ${
                   isTapping ? "nav-link-tap" : ""
                 } ${
@@ -144,6 +163,17 @@ export function SiteNav() {
           Download
         </a>
       </nav>
+
+      {/* Copied email toast */}
+      {copiedEmail && (
+        <div
+          className="fixed left-1/2 top-20 z-100 -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-white shadow-lg animate-in fade-in zoom-in-95 duration-200"
+          role="status"
+          aria-live="polite"
+        >
+          Copied email
+        </div>
+      )}
     </header>
   );
 }
