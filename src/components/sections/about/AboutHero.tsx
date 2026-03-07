@@ -91,7 +91,7 @@ export function AboutHero() {
           </span>
           <h1 className="max-w-full wrap-break-word text-[clamp(22px,7vw,68px)] leading-[1.2] font-extrabold text-white sm:text-[clamp(32px,6vw,68px)]">
             Built from the shared experience of
-            <span className="mt-2 block w-full min-w-0">
+            <span className="mt-2 block w-full min-w-0 min-h-[2.4em] sm:min-h-[1.2em]">
               <Typewriter />
             </span>
           </h1>
