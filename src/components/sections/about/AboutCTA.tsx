@@ -36,7 +36,7 @@ export function AboutCTA() {
   return (
     <section className="bg-background-cta px-6 py-20 text-center md:px-12 lg:py-32">
       <ScrollReveal>
-        <h2 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+        <h2 className="text-4xl font-extrabold text-foreground md:text-5xl lg:text-6xl">
           Expand your Circle.
         </h2>
         <p className="mx-auto mt-8 max-w-[760px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">

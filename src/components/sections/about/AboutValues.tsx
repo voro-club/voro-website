@@ -1,4 +1,7 @@
+"use client";
+
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 const values = [
   {
@@ -28,10 +31,10 @@ export function AboutValues() {
         <div className="mb-16 grid items-end gap-20 md:grid-cols-2">
           <ScrollReveal>
             <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[2px] text-[#008199]/75">
+              <p className="mb-4 text-base font-extrabold uppercase tracking-[2px] text-[#008199]/75">
                 What We Believe
               </p>
-              <h2 className="text-4xl font-bold text-foreground md:text-5xl">
+              <h2 className="text-4xl font-extrabold text-foreground md:text-5xl">
                 Connection happens through doing things together.
               </h2>
             </div>
@@ -45,20 +48,22 @@ export function AboutValues() {
           </ScrollReveal>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3 md:items-stretch">
           {values.map((value) => (
             <ScrollReveal key={value.title}>
-              <div className="rounded-[20px] border border-black/6 border-l-[3px] border-l-transparent bg-white p-9 transition-all duration-300 hover:-translate-y-1 hover:border-l-primary hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[14px] bg-primary text-[22px]">
+              <TiltCard className="h-full">
+                <div className="flex h-full flex-col rounded-[20px] border border-black/6 bg-white p-9 font-sans transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+                <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-primary text-[22px]">
                   {value.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-foreground">
+                <h3 className="mb-3 text-xl font-bold text-foreground">
                   {value.title}
                 </h3>
-                <p className="text-base leading-relaxed text-foreground">
+                <p className="min-h-0 flex-1 text-base leading-relaxed text-foreground">
                   {value.description}
                 </p>
               </div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

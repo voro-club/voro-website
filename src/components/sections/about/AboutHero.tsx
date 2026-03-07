@@ -55,17 +55,41 @@ function Typewriter() {
 }
 
 export function AboutHero() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    // Wait for first paint then start fade so the transition is smooth
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setReady(true);
+      });
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-primary px-6 pt-40 pb-20 md:px-12 md:pt-44 md:pb-24 lg:px-20">
+      {/* Beige overlay fades out for a smooth reveal (opacity is GPU-friendly) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-background transition-opacity duration-900 ease-out"
+        style={{ opacity: ready ? 0 : 1 }}
+      />
+
       <div className="pointer-events-none absolute -top-[200px] -right-[100px] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.07)_0%,transparent_70%)]" />
       <div className="pointer-events-none absolute -bottom-[150px] -left-[50px] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.05)_0%,transparent_70%)]" />
 
+      <div
+        className={`transition-opacity duration-700 delay-200 ease-out ${
+          ready ? "opacity-100" : "opacity-0"
+        }`}
+      >
       <ScrollReveal>
         <div className="relative z-10 max-w-[720px]">
-          <span className="mb-5 inline-block text-[11px] font-semibold uppercase tracking-[2px] text-white/65">
+          <span className="mb-5 inline-block text-sm font-extrabold uppercase tracking-[2px] text-white/65">
             Our Story
           </span>
-          <h1 className="text-[clamp(42px,6vw,68px)] leading-[1.1] font-bold text-white">
+          <h1 className="text-[clamp(42px,6vw,68px)] leading-[1.1] font-extrabold text-white">
             Built from the shared experience of
             <span className="mt-2 block">
               <Typewriter />
@@ -81,6 +105,7 @@ export function AboutHero() {
           </p>
         </div>
       </ScrollReveal>
+      </div>
     </section>
   );
 }

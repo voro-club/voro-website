@@ -139,7 +139,7 @@ export function SiteNav() {
           href={APP_STORE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-1 rounded-full bg-primary px-7 py-2.5 text-sm font-semibold text-white transition-transform duration-150 active:scale-95 hover:bg-primary/90"
+          className="ml-1 rounded-full border border-[#F4EFE8] bg-[#008199] px-7 py-2.5 text-sm font-semibold text-white shadow-[0_5px_5px_0_rgba(0,0,0,0.5)] transition-transform duration-150 active:scale-95 hover:bg-[#006d82]"
         >
           Download
         </a>

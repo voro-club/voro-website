@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 export function Communities() {
   return (
@@ -15,7 +16,8 @@ export function Communities() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {/* Community photo card */}
-          <Card className="overflow-hidden border-0 shadow-sm">
+          <TiltCard className="h-full">
+          <Card className="h-full overflow-hidden rounded-xl border-0 shadow-sm">
             <div className="aspect-16/10 w-full bg-muted/30">
               <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
                 Swim &amp; Social Photo
@@ -28,9 +30,11 @@ export function Communities() {
               </p>
             </CardContent>
           </Card>
+          </TiltCard>
 
           {/* Feed posts card */}
-          <Card className="overflow-hidden border-0 shadow-sm">
+          <TiltCard className="h-full">
+          <Card className="h-full overflow-hidden rounded-xl border-0 shadow-sm">
             <CardContent className="pt-6">
               <h3 className="text-xl font-semibold">
                 Already organizing in real life
@@ -100,6 +104,7 @@ export function Communities() {
               </div>
             </CardContent>
           </Card>
+          </TiltCard>
         </div>
       </div>
     </section>

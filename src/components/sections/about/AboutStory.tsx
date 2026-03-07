@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 const insights = [
   {
@@ -71,21 +72,23 @@ function StatCards() {
   return (
     <div ref={ref} className="flex flex-col gap-4">
       {insights.map((item, i) => (
-        <div
+        <TiltCard
           key={item.num}
-          className={`flex items-start gap-6 rounded-[20px] border border-black/7 bg-white p-9 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] ${
+          className={`h-full transition-all duration-500 ${
             visible[i]
               ? "translate-x-0 opacity-100"
               : "translate-x-10 opacity-0"
           }`}
         >
-          <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white stat-num-pulse">
-            {item.num}
+          <div className="flex h-full items-start gap-6 rounded-[20px] border border-black/7 bg-white p-9">
+            <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-extrabold text-white">
+              {item.num}
+            </div>
+            <div className="text-lg leading-[1.7] text-foreground">
+              {item.text}
+            </div>
           </div>
-          <div className="text-lg leading-[1.7] text-foreground">
-            {item.text}
-          </div>
-        </div>
+        </TiltCard>
       ))}
     </div>
   );
@@ -98,10 +101,10 @@ export function AboutStory() {
         <div className="mt-16 grid items-start gap-20 md:grid-cols-2">
           <ScrollReveal>
             <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[2px] text-[#008199]/75">
+              <p className="mb-4 text-base font-extrabold uppercase tracking-[2px] text-[#008199]/75">
                 How We Got Here
               </p>
-              <h2 className="mb-8 text-4xl font-bold text-foreground md:text-5xl">
+              <h2 className="mb-8 text-4xl font-extrabold text-foreground md:text-5xl">
                 Every generation rebuilds how people meet.
               </h2>
               <div className="space-y-5 text-lg leading-[1.85] text-foreground">
@@ -113,7 +116,7 @@ export function AboutStory() {
                 </p>
                 <p>
                   What they noticed pretty quickly:{" "}
-                  <strong className="font-semibold text-primary">
+                  <strong className="font-bold text-primary">
                     everything is easier with a friend by your side.
                   </strong>{" "}
                   The run club you&apos;d been meaning to try, the neighborhood
