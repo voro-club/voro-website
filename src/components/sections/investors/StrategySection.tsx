@@ -14,35 +14,42 @@ export function StrategySection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="max-w-[640px] space-y-9">
+          <div className="grid gap-12 md:grid-cols-3 md:items-start md:gap-8 lg:gap-12">
+            {/* Left */}
             <div>
               <p className="mb-3 text-lg font-bold italic text-foreground">
                 &ldquo;How do you avoid the empty room problem?&rdquo;
               </p>
-              <div className="space-y-5 text-lg leading-[1.85] text-foreground">
-                <p>
-                  We launched in Denver and LA, learned quickly, and made a
-                  deliberate call:{" "}
-                  <strong className="font-bold text-primary">
-                    go deep before going wide
-                  </strong>
-                  . Rather than spreading thin across two cities, we&apos;re
-                  concentrating on USC first, building the kind of density where
-                  every new user immediately sees active clubs, familiar faces,
-                  and upcoming events.
-                </p>
-                <p>
-                  We seed each campus with{" "}
-                  <strong className="font-bold text-primary">
-                    existing community organizers
-                  </strong>{" "}
-                  who already run communities on Instagram, TikTok, and WhatsApp.
-                  These are real, active groups migrating into a better home. Not
-                  empty shells waiting for users.
-                </p>
-              </div>
+              <p className="text-lg leading-[1.85] text-foreground">
+                We launched in Denver and LA, learned quickly, and made a
+                deliberate call:{" "}
+                <strong className="font-bold text-primary">
+                  go deep before going wide
+                </strong>
+                . Rather than spreading thin across two cities, we&apos;re
+                concentrating on USC first, building the kind of density where
+                every new user immediately sees active clubs, familiar faces,
+                and upcoming events.
+              </p>
             </div>
 
+            {/* Middle — triangle center */}
+            <div>
+              <p className="mb-3 text-lg font-bold italic text-foreground">
+                &ldquo;Where do your first users come from?&rdquo;
+              </p>
+              <p className="text-lg leading-[1.85] text-foreground">
+                We seed each campus with{" "}
+                <strong className="font-bold text-primary">
+                  existing community organizers
+                </strong>{" "}
+                who already run communities on Instagram, TikTok, and WhatsApp.
+                These are real, active groups migrating into a better home. Not
+                empty shells waiting for users.
+              </p>
+            </div>
+
+            {/* Right */}
             <div>
               <p className="mb-3 text-lg font-bold italic text-foreground">
                 &ldquo;What brings people back week after week?&rdquo;
