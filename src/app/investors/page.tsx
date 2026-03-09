@@ -41,10 +41,9 @@ export default function InvestorsPage() {
       <RoadmapSection />
       <SectionDivider />
       <TractionSection />
-      <SectionDivider />
-      <MarketSection />
       <BusinessModelSection />
       <SectionDivider />
+      <MarketSection />
       <InvestorCTA />
       <InvestorFooter />
     </main>

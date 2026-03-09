@@ -29,13 +29,13 @@ const phases: Phase[] = [
             LA Community (Breadth):
           </strong>{" "}
           Simultaneously activate real-world communities already forming in
-          LA &mdash; fitness clubs, swim socials, nightlife groups. These
+          LA: fitness clubs, swim socials, nightlife groups. These
           aren&apos;t test users, they&apos;re founding communities. In person
           events are how Voro proves online discovery converts to real
           attendance.
         </p>
         <p className="text-sm text-muted-foreground">
-          The two tracks feed each other &mdash; USC students graduate into LA.
+          The two tracks feed each other. USC students graduate into LA.
           LA energy makes the platform feel alive for USC users checking in.
         </p>
         <p className="mt-3 text-sm text-muted-foreground">
@@ -44,7 +44,7 @@ const phases: Phase[] = [
           </strong>{" "}
           UCLA runs on the quarter system, giving us a natural April on-ramp. We
           begin UCLA activation in April while USC density is still
-          building &mdash; two campuses, overlapping calendars, compounding
+          building. Two campuses, overlapping calendars, compounding
           network.
         </p>
       </>
@@ -64,7 +64,7 @@ const phases: Phase[] = [
     body: (
       <>
         <p className="mb-3 text-base leading-relaxed text-foreground">
-          Campus goes quiet &mdash; LA Metro doesn&apos;t. We shift full focus
+          Campus goes quiet but LA Metro doesn&apos;t. We shift full focus
           to LA community growth: clubs, events, organizer recruitment. But
           critically,{" "}
           <strong className="font-bold text-primary">
@@ -75,7 +75,7 @@ const phases: Phase[] = [
         <p className="text-base leading-relaxed text-foreground">
           USC students go home for summer and bring Voro with them. Like
           Tinder&apos;s early campus rollout, organic word-of-mouth will surface
-          markets we haven&apos;t touched yet &mdash; we follow the data rather
+          markets we haven&apos;t touched yet. We follow the data rather
           than fighting it. Austin already has an active waitlist. We
           didn&apos;t push for that.
         </p>
@@ -96,14 +96,14 @@ const phases: Phase[] = [
         <p className="mb-3 text-base leading-relaxed text-foreground">
           Return to campus with proof points, real clubs, and a living LA
           community behind it. Welcome Week activations target incoming freshman
-          at USC and UCLA before habits form &mdash; the highest-leverage moment
+          at USC and UCLA before habits form. It&apos;s the highest-leverage moment
           in a student&apos;s social life. Both campuses re-activate
           simultaneously, with USC as the proven playbook and UCLA entering its
           fall quarter.
         </p>
         <p className="text-base leading-relaxed text-foreground">
           We activate next in whichever markets showed organic traction over
-          summer &mdash; not based on a predetermined map, but on where real
+          summer, not based on a predetermined map, but on where real
           demand already exists.
         </p>
       </>

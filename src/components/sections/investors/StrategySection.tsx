@@ -7,7 +7,7 @@ const benchmarks = [
   {
     metric: "Day 7 Retention",
     target: "40–50%",
-    path: "Push notification system in active development. Currently users return by choice — notifications are the single biggest unlock for early habit formation.",
+    path: "Push notification system in active development. Currently users return by choice. Notifications are the single biggest unlock for early habit formation.",
   },
   {
     metric: "Monthly Active Rate",
@@ -17,7 +17,7 @@ const benchmarks = [
   {
     metric: "Match → Meetup",
     target: "15–20%",
-    path: "Circles matching improves with density — seeding that now through USC and LA Metro. Svenn AI will actively nudge matched groups toward in person plans.",
+    path: "Circles matching improves with density. Seeding that now through USC and LA Metro. Svenn AI will actively nudge matched groups toward in person plans.",
   },
 ];
 
@@ -116,9 +116,9 @@ export function StrategySection() {
                   <p>
                     The fastest way to build a community platform isn&apos;t to
                     target the most isolated users first. It&apos;s to onboard
-                    the most socially connected ones &mdash; club leaders,
-                    organizers, friend groups &mdash; and let their activity
-                    create the gravity that pulls everyone else in.
+                    the most socially connected ones: club leaders, organizers,
+                    friend groups. Let their activity create the gravity that
+                    pulls everyone else in.
                   </p>
                   <p>
                     We seed each market with{" "}

@@ -82,7 +82,7 @@ function CompetitorBox() {
               {c.logo}
             </span>
             <span>
-              <strong className="font-bold text-white">{c.name}</strong> &mdash;{" "}
+              <strong className="font-bold text-white">{c.name}</strong>:{" "}
               {c.issue}
             </span>
           </li>
