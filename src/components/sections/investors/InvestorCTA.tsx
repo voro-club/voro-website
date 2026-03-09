@@ -2,9 +2,9 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function InvestorCTA() {
   return (
-    <section id="contact" aria-label="Contact" className="bg-[#EBE6E0] px-6 py-20 text-center md:px-12 lg:px-20 lg:py-32">
+    <section id="contact" aria-label="Contact" className="bg-background-cta px-6 py-20 text-center md:px-12 lg:px-20 lg:py-32">
       <ScrollReveal>
-        <h2 className="text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
+        <h2 className="text-4xl font-extrabold text-foreground md:text-5xl lg:text-6xl">
           Interested in learning more?
         </h2>
         <p className="mx-auto mt-8 max-w-[460px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">

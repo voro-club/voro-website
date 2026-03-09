@@ -3,20 +3,21 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 const marketCards = [
   {
     label: "TAM",
-    num: "$1B+",
+    num: "$20B+",
     description:
-      "Global Monetizable Social Discovery Market (Gen Z & Early-Career) \u2014 social discovery platforms, community & creator-led platforms, urban event-driven social products",
+      "Global market at the intersection of social discovery ($11B), community platforms ($9.8B), and event apps ($12.8B). Voro competes across all three.",
   },
   {
     label: "SAM",
-    num: "$75\u2013100M",
-    description: "Top 25\u201350 U.S. Campuses + Top 10 Urban Hubs",
+    num: "$3–4B",
+    description:
+      "U.S. Gen Z and Millennial social discovery users ages 18–35 — the segment actively seeking real-world connection tools beyond traditional dating apps.",
   },
   {
     label: "SOM",
-    num: "$25\u201340M",
+    num: "$15–35M",
     description:
-      "15\u201320 high-density campuses with strong relocation pipelines & 2\u20133 city hubs.",
+      "USC + LA Metro 18–35 population (~2M+), at conservative 1–2% penetration and $5–10/mo blended ARPU. Austin organic waitlist signals next market.",
   },
 ];
 

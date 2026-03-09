@@ -1,31 +1,131 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import type { ReactNode } from "react";
 
-const phases = [
+interface Phase {
+  phase: string;
+  title: string;
+  body: ReactNode;
+  tags: string[];
+  active?: boolean;
+}
+
+const phases: Phase[] = [
   {
-    phase: "Phase 1 \u2014 Now",
-    title: "USC Focus",
-    description:
-      "Live in Denver and LA, but strategically focused on USC first. Target Greek life, incoming freshmen, and existing community organizers. Drive full-group onboarding with Greek life and full friend groups. Build density before expanding.",
-    tags: ["Campus Density First", "Greek Life", "Campus Ambassadors"],
+    phase: "Phase 1 — Now → May",
+    title: "Seed: Two Tracks, One Goal",
+    body: (
+      <>
+        <p className="mb-3 text-base leading-relaxed text-foreground">
+          <strong className="font-bold text-primary">USC (Depth):</strong> Go
+          deep on one campus. Recruit club leaders, activate Greek
+          life-adjacent networks, build the social graph tight. USC gives us a
+          contained, high-velocity environment to prove the Clubs retention loop
+          before scaling it.
+        </p>
+        <p className="mb-3 text-base leading-relaxed text-foreground">
+          <strong className="font-bold text-primary">
+            LA Community (Breadth):
+          </strong>{" "}
+          Simultaneously activate real-world communities already forming in
+          LA &mdash; fitness clubs, swim socials, nightlife groups. These
+          aren&apos;t test users, they&apos;re founding communities. In person
+          events are how Voro proves online discovery converts to real
+          attendance.
+        </p>
+        <p className="text-sm text-muted-foreground">
+          The two tracks feed each other &mdash; USC students graduate into LA.
+          LA energy makes the platform feel alive for USC users checking in.
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground">
+          <strong className="font-semibold text-foreground">
+            UCLA note:
+          </strong>{" "}
+          UCLA runs on the quarter system, giving us a natural April on-ramp. We
+          begin UCLA activation in April while USC density is still
+          building &mdash; two campuses, overlapping calendars, compounding
+          network.
+        </p>
+      </>
+    ),
+    tags: [
+      "USC Campus Density",
+      "Greek Life",
+      "LA Founding Communities",
+      "UCLA (April)",
+      "In Person Events",
+    ],
     active: true,
   },
   {
-    phase: "Phase 2",
-    title: "LA Campuses & City Expansion",
-    description:
-      "Expand to UCLA and other LA campuses, nightlife clusters, and adjacent social graphs. USC becomes the outbound growth engine into broader LA social circles.",
-    tags: ["UCLA", "LA Metro", "LA College Campuses"],
-    active: false,
+    phase: "Phase 2 — Summer (May → August)",
+    title: "Bridge: Go National, Don't Force It",
+    body: (
+      <>
+        <p className="mb-3 text-base leading-relaxed text-foreground">
+          Campus goes quiet &mdash; LA Metro doesn&apos;t. We shift full focus
+          to LA community growth: clubs, events, organizer recruitment. But
+          critically,{" "}
+          <strong className="font-bold text-primary">
+            Voro opens nationally
+          </strong>
+          . Not to push growth, but to catch it.
+        </p>
+        <p className="text-base leading-relaxed text-foreground">
+          USC students go home for summer and bring Voro with them. Like
+          Tinder&apos;s early campus rollout, organic word-of-mouth will surface
+          markets we haven&apos;t touched yet &mdash; we follow the data rather
+          than fighting it. Austin already has an active waitlist. We
+          didn&apos;t push for that.
+        </p>
+      </>
+    ),
+    tags: [
+      "LA Metro Growth",
+      "National Soft Open",
+      "Organic Market Discovery",
+      "Ambassador Pipeline",
+    ],
   },
   {
-    phase: "Phase 3",
-    title: "US Campus and City Expansion",
-    description:
-      "Rinse and repeat the dense-network launch playbook. Expand to the top 25\u201350 U.S. campuses and top 10 urban hubs.",
-    tags: ["Top 25\u201350 Campuses", "Top 10 Urban Hubs", "B2B Partnerships"],
-    active: false,
+    phase: "Phase 3 — Fall Surge (August → September)",
+    title: "Scale: Welcome Week & Beyond",
+    body: (
+      <>
+        <p className="mb-3 text-base leading-relaxed text-foreground">
+          Return to campus with proof points, real clubs, and a living LA
+          community behind it. Welcome Week activations target incoming freshman
+          at USC and UCLA before habits form &mdash; the highest-leverage moment
+          in a student&apos;s social life. Both campuses re-activate
+          simultaneously, with USC as the proven playbook and UCLA entering its
+          fall quarter.
+        </p>
+        <p className="text-base leading-relaxed text-foreground">
+          We activate next in whichever markets showed organic traction over
+          summer &mdash; not based on a predetermined map, but on where real
+          demand already exists.
+        </p>
+      </>
+    ),
+    tags: [
+      "USC Welcome Week",
+      "USC + UCLA Welcome Week",
+      "Data-Led City Expansion",
+      "Rinse & Repeat",
+    ],
+  },
+  {
+    phase: "Phase 4 — 2027+",
+    title: "National Campus & City Network",
+    body: (
+      <p className="text-base leading-relaxed text-foreground">
+        Apply the proven dense-network playbook to the top 25–50 U.S. campuses
+        and top 10 urban hubs. Each campus cohort becomes the next city&apos;s
+        founding community as students graduate and relocate.
+      </p>
+    ),
+    tags: ["Top 25–50 Campuses", "Top 10 Urban Hubs", "Community Infrastructure"],
   },
 ];
 
@@ -38,7 +138,7 @@ export function RoadmapSection() {
             Roadmap
           </p>
           <h2 className="mb-8 text-4xl font-extrabold text-foreground md:text-5xl">
-            Density first. Then expansion.
+            Density first. Then catch the growth we create.
           </h2>
         </ScrollReveal>
 
@@ -46,7 +146,6 @@ export function RoadmapSection() {
           <div className="mt-2 flex flex-col">
             {phases.map((item, i) => (
               <div key={item.title} className="flex gap-8">
-                {/* Marker column */}
                 <div className="flex shrink-0 flex-col items-center pt-1.5">
                   <div
                     className={`relative z-10 h-5 w-5 shrink-0 rounded-full border-[3px] border-primary transition-colors ${
@@ -60,7 +159,6 @@ export function RoadmapSection() {
                   )}
                 </div>
 
-                {/* Content card */}
                 <div
                   className={`mb-7 flex-1 rounded-[20px] border bg-white p-9 transition-all duration-300 hover:translate-x-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] ${
                     item.active
@@ -74,9 +172,7 @@ export function RoadmapSection() {
                   <h3 className="mb-3 text-2xl font-extrabold text-foreground">
                     {item.title}
                   </h3>
-                  <p className="mb-5 text-base leading-relaxed text-foreground">
-                    {item.description}
-                  </p>
+                  <div className="mb-5">{item.body}</div>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span
