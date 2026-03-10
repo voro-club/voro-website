@@ -144,12 +144,15 @@ export function HowItWorks() {
                   <Card className={`h-full overflow-hidden rounded-xl border border-black/5 shadow-none ${feature.images ? "gap-0 py-0" : ""}`}>
                     {feature.images ? (
                       <div
-                        className="flex cursor-pointer items-center justify-center gap-4 bg-muted/30 px-4 py-8 transition-opacity hover:opacity-90"
-                        onClick={() => setExpandedIndex(index)}
+                        className="flex items-center justify-center gap-4 bg-muted/30 px-4 py-8 transition-opacity lg:cursor-pointer lg:hover:opacity-90"
+                        onClick={() => {
+                          if (window.innerWidth >= 1024) setExpandedIndex(index);
+                        }}
                         role="button"
                         tabIndex={0}
                         aria-label={`Expand ${feature.title} preview`}
                         onKeyDown={(e) => {
+                          if (window.innerWidth < 1024) return;
                           if (e.key === "Enter" || e.key === " ") {
                             e.preventDefault();
                             setExpandedIndex(index);

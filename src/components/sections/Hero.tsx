@@ -77,7 +77,7 @@ export function Hero() {
         </div>
 
         {/* Right column - phone mockups */}
-        <div className="relative flex w-full shrink-0 items-center justify-center lg:ml-auto lg:max-w-2xl lg:justify-end">
+        <div className="relative hidden w-full shrink-0 items-center justify-center lg:ml-auto lg:flex lg:max-w-2xl lg:justify-end">
           <div className="relative h-[660px] w-[460px] md:h-[750px] md:w-[520px] lg:h-[840px] lg:w-[580px]">
             {/* Phone 1 - behind, slight tilt */}
             <div
