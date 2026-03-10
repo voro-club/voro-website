@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TiltCard } from "@/components/ui/tilt-card";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { IPhoneFrame } from "@/components/ui/iphone-frame";
 
 const features = [
   {
@@ -11,6 +12,7 @@ const features = [
     description:
       "Clubs organize the communities that already exist \u2014 hiking, nightlife, fitness, creativity, niche energy. Join solo and show up as yourself.",
     imagePlaceholder: "Explore Clubs Screenshot",
+    images: null,
   },
   {
     title: "Connect solo \u2014 or with your friends.",
@@ -18,6 +20,10 @@ const features = [
     description:
       "A Circle is a shared group profile (2\u20136 friends) who want to meet more people together. You can also swipe solo.",
     imagePlaceholder: "Silverlake Sirens Screenshot",
+    images: [
+      { src: "/images/penelope.png", alt: "Penelope profile screen" },
+      { src: "/images/sirens.png", alt: "Silverlake Sirens circle screen" },
+    ],
   },
   {
     title: "Club Feed",
@@ -25,6 +31,7 @@ const features = [
     description:
       "Clubs have live feeds of real-world plans \u2014 casual hangs, hosted events, group meetups. Everything in one place.",
     imagePlaceholder: "Club Feed Screenshot",
+    images: null,
   },
 ];
 
@@ -43,13 +50,27 @@ export function HowItWorks() {
           <div className="grid gap-6 md:grid-cols-3">
             {features.map((feature) => (
               <TiltCard key={feature.title} className="h-full">
-                <Card className="h-full overflow-hidden rounded-xl border-0 shadow-none">
-                  <div className="aspect-4/3 w-full bg-muted/30">
-                    <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
-                      {feature.imagePlaceholder}
+                <Card className={`h-full overflow-hidden rounded-xl border border-black/5 shadow-none ${feature.images ? "gap-0 py-0" : ""}`}>
+                  {feature.images ? (
+                    <div className="flex items-center justify-center gap-4 bg-muted/30 px-4 py-8">
+                      {feature.images.map((img) => (
+                        <IPhoneFrame
+                          key={img.src}
+                          src={img.src}
+                          alt={img.alt}
+                          compact
+                          className="w-[140px] md:w-[160px] lg:w-[180px]"
+                        />
+                      ))}
                     </div>
-                  </div>
-                  <CardContent className="pt-4">
+                  ) : (
+                    <div className="aspect-4/3 w-full bg-muted/30">
+                      <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
+                        {feature.imagePlaceholder}
+                      </div>
+                    </div>
+                  )}
+                  <CardContent className={feature.images ? "px-6 py-5" : "pt-4"}>
                     <h3 className="text-lg font-semibold">{feature.subtitle}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {feature.description}
