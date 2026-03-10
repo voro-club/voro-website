@@ -12,7 +12,7 @@ const features = [
     description:
       "Clubs organize the communities that already exist \u2014 hiking, nightlife, fitness, creativity, niche energy. Join solo and show up as yourself.",
     imagePlaceholder: "Explore Clubs Screenshot",
-    images: null,
+    images: [{ src: "/images/explore.png", alt: "Explore clubs screen" }],
   },
   {
     title: "Connect solo \u2014 or with your friends.",

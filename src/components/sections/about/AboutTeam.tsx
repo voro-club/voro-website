@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { TiltCard } from "@/components/ui/tilt-card";
 
@@ -8,6 +9,8 @@ const team = [
     bio: "Background in creative strategy, consumer brand building, and early-stage investing. Former Creative Director at a family venture office, with experience shaping go-to-market, storytelling, and partnerships across travel, lifestyle, and media.",
     tag: "Group Glue",
     emoji: "👩🏻",
+    image: "/images/courtney.jpeg",
+    imagePosition: "object-[center_30%]",
   },
   {
     name: "Holly Smith",
@@ -15,6 +18,7 @@ const team = [
     bio: "6+ years in finance and operations, including advising on high-impact transactions at PwC. Holds a Master's in Accounting. Leads financial strategy, execution, and company operations.",
     tag: "Voice of Reason",
     emoji: "👩🏼",
+    image: "/images/holly.png",
   },
   {
     name: "Nate Dereb",
@@ -22,6 +26,8 @@ const team = [
     bio: "7+ years of software engineering experience, including 5+ years at Adobe. Specializes in AI-powered analytics and scalable product engineering. Built LLM-driven insight tools and consumer apps with 170k+ combined users.",
     tag: "Forever Unbothered",
     emoji: "👨🏿",
+    image: "/images/nate.jpg",
+    imagePosition: "object-[center_30%]",
   },
   {
     name: "Chris Chifor",
@@ -29,6 +35,9 @@ const team = [
     bio: "Built multiple startups from zero to launch to scale. Expert in growth, retention, and product. Led product at a generative AI startup and built scalable systems in past roles. Architect of experiences built for user enjoyment and scale.",
     tag: "Agent of Chaos & Coding",
     emoji: "👨🏻‍💻",
+    image: "/images/chris.jpeg",
+    imagePosition: "object-[60%_30%]",
+    imageScale: "scale-[1.6] translate-y-[8%]",
   },
 ];
 
@@ -56,8 +65,21 @@ export function AboutTeam() {
             <ScrollReveal key={member.name}>
               <TiltCard className="h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/7">
-                  <div className="flex aspect-4/3 w-full shrink-0 items-center justify-center bg-linear-to-br from-accent-mid/10 to-accent-bright/20 text-[64px]">
-                    {member.emoji}
+                  <div className="relative aspect-square w-full shrink-0 overflow-hidden bg-linear-to-br from-accent-mid/10 to-accent-bright/20">
+                    {"image" in member && member.image ? (
+                      <div className={`absolute inset-0 ${"imageScale" in member && member.imageScale ? member.imageScale : ""}`}>
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className={`object-cover ${"imagePosition" in member && member.imagePosition ? member.imagePosition : "object-top"}`}
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-[64px]">
+                        {member.emoji}
+                      </div>
+                    )}
                   </div>
                   <div className="flex min-h-[260px] min-w-0 flex-1 flex-col p-7">
                     <p className="mb-1.5 text-xs font-bold uppercase tracking-[1.5px] text-[#008199]/75">
