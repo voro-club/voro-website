@@ -65,7 +65,7 @@ export function TractionSection() {
 
         <ScrollReveal>
           <div>
-            <div className="flex gap-2 overflow-x-auto border-b-2 border-black/7 pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-2 overflow-x-auto overflow-y-hidden border-b-2 border-black/7 pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -81,7 +81,7 @@ export function TractionSection() {
               ))}
             </div>
 
-            <div className="rounded-b-2xl border border-t-0 border-black/7 bg-white p-9 md:px-10">
+            <div className="overflow-y-hidden rounded-b-2xl border border-t-0 border-black/7 bg-white p-9 md:px-10">
               {tabs.map((tab) => (
                 <ul
                   key={tab.id}

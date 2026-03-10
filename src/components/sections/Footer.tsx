@@ -1,10 +1,36 @@
+"use client";
+
+import { useState } from "react";
+
+const CONTACT_EMAIL = "contact@voroapp.com";
+
 export function Footer() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(CONTACT_EMAIL).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(() => {});
+  };
+
   return (
-    <footer className="bg-primary px-6 py-8 text-primary-foreground md:px-12 lg:px-20">
+    <>
+      {copied && (
+        <div
+          className="fixed left-1/2 top-20 z-[9999] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-white shadow-lg animate-in fade-in zoom-in-95 duration-200"
+          role="status"
+          aria-live="polite"
+        >
+          Copied email
+        </div>
+      )}
+      <footer className="bg-primary px-6 py-8 text-primary-foreground md:px-12 lg:px-20">
       <div className="mx-auto flex max-w-[90rem] flex-col items-center justify-between gap-6 md:flex-row">
         <nav aria-label="Footer navigation" className="flex items-center gap-6">
           <a
-            href="mailto:contact@voroapp.com"
+            href={`mailto:${CONTACT_EMAIL}`}
+            onClick={copyEmail}
             className="text-sm underline underline-offset-4 transition-opacity hover:opacity-80"
           >
             Contact
@@ -74,5 +100,6 @@ export function Footer() {
         <p>&copy; {new Date().getFullYear()} Voro, Co. All rights reserved.</p>
       </div>
     </footer>
+    </>
   );
 }

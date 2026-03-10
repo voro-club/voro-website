@@ -35,7 +35,7 @@ export function Communities() {
 
           {/* Feed posts card */}
           <TiltCard className="h-full">
-          <Card className="relative h-full overflow-hidden rounded-xl border-0 shadow-sm">
+          <Card className="relative h-full min-h-[420px] overflow-hidden rounded-xl border-0 shadow-sm md:min-h-0">
             <h3 className="relative z-10 px-6 pt-4 text-xl font-semibold">
               Already organizing in real life
             </h3>

@@ -53,7 +53,7 @@ export function AboutValues() {
             <ScrollReveal key={value.title}>
               <TiltCard className="h-full">
                 <div className="flex h-full flex-col rounded-[20px] border border-black/6 bg-white p-9 font-sans transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-primary text-[22px]">
+                <div className="mb-5 text-[2.25rem] leading-none">
                   {value.icon}
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-foreground">

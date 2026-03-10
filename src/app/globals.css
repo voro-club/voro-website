@@ -135,13 +135,6 @@
 }
 
 
-/* ── Confetti fall ── */
-
-@keyframes confettiFall {
-  0%   { opacity: 1; transform: translateY(0) rotate(0deg); }
-  100% { opacity: 0; transform: translateY(300px) rotate(720deg); }
-}
-
 /* ── Bubble float animations ── */
 
 @keyframes bubble-float-0 {
