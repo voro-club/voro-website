@@ -6,32 +6,27 @@ import Image from "next/image";
 
 const competitors = [
   {
-    logo: "B",
-    colorClass: "bg-[#FFD520] text-foreground",
+    image: "/images/bumble-logo.jpg",
     name: "Bumble",
     issue: "high-pressure UX, optimized for 1:1 matching, not community",
   },
   {
-    logo: "G",
-    colorClass: "bg-white text-foreground text-[11px]",
+    image: "/images/geneva-logo.png",
     name: "Geneva",
     issue: "group chat only, no discovery, no events, no in real life loop",
   },
   {
-    logo: "P",
-    colorClass: "bg-[#FF3366] text-white italic",
+    image: "/images/partiful-logo.png",
     name: "Partiful",
     issue: "events only, one-off use case, no retention or monetization",
   },
   {
-    logo: "M",
-    colorClass: "bg-[#ED1C40] text-white",
+    image: "/images/meetup-logo.jpg",
     name: "Meetup",
     issue: "older audience, transactional, not built for Gen Z",
   },
   {
-    logo: "f",
-    colorClass: "bg-[#1877F2] text-white text-base font-black",
+    image: "/images/facebook-logo.jpg",
     name: "Facebook",
     issue: "bloated, not Gen Z native, flooded with scams and AI content",
   },
@@ -69,17 +64,21 @@ function CompetitorBox() {
         {competitors.map((c, i) => (
           <li
             key={c.name}
-            className="flex items-start gap-3.5 border-b border-white/12 py-3 text-base leading-[1.6] text-white/85 transition-all duration-400 last:border-b-0"
+            className="flex items-center gap-3.5 border-b border-white/12 py-3 text-base leading-[1.6] text-white/85 transition-all duration-400 last:border-b-0"
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? "translateX(0)" : "translateX(-16px)",
               transitionDelay: `${i * 120}ms`,
             }}
           >
-            <span
-              className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[13px] font-extrabold ${c.colorClass}`}
-            >
-              {c.logo}
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-md">
+              <Image
+                src={c.image}
+                alt={c.name}
+                width={28}
+                height={28}
+                className={`object-cover ${c.name === "Bumble" || c.name === "Facebook" ? "scale-[1.35]" : ""}`}
+              />
             </span>
             <span>
               <strong className="font-bold text-white">{c.name}</strong>:{" "}
