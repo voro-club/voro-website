@@ -85,7 +85,7 @@ export function Hero() {
               style={{ transform: "rotate(2deg)" }}
             >
               <IPhoneFrame
-                src="/images/IMG_4009.PNG"
+                src="/images/phone2members.png"
                 alt="Voro app screenshot showing the Club feed with real-time posts and events"
                 priority
               />

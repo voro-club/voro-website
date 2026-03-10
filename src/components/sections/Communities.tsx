@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { TiltCard } from "@/components/ui/tilt-card";
 
@@ -34,75 +35,34 @@ export function Communities() {
 
           {/* Feed posts card */}
           <TiltCard className="h-full">
-          <Card className="h-full overflow-hidden rounded-xl border-0 shadow-sm">
-            <CardContent className="pt-6">
-              <h3 className="text-xl font-semibold">
-                Already organizing in real life
-              </h3>
-
-              <div className="mt-4 space-y-4">
-                {/* Post 1 */}
-                <div className="rounded-lg bg-background p-4">
-                  <div className="border-l-4 border-primary pl-3">
-                    <p className="text-sm text-foreground">
-                      Very excited for the Super Bowl
-                    </p>
-                  </div>
-                  <div className="mt-2 flex items-center gap-4 text-xs text-muted-foreground">
-                    <span>3 Likes</span>
-                    <span>1 Comment</span>
-                  </div>
+          <Card className="relative h-full overflow-hidden rounded-xl border-0 shadow-sm">
+            <h3 className="relative z-10 px-6 pt-4 text-xl font-semibold">
+              Already organizing in real life
+            </h3>
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+              <div className="w-full space-y-4">
+                <div className="overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/kai.jpeg"
+                    alt="Kai D. posting about Weekly Sunrise Plunges"
+                    width={800}
+                    height={200}
+                    className="w-full object-cover"
+                  />
                 </div>
 
-                {/* Post 2 */}
-                <div className="rounded-lg bg-background p-4">
-                  <div className="flex items-center gap-2">
-                    <div className="h-6 w-6 rounded-full bg-muted" />
-                    <p className="text-sm">
-                      <span className="font-medium">Violet V.</span>
-                      {" posted in "}
-                      <span className="font-medium text-primary">
-                        Cookbook Club
-                      </span>
-                    </p>
-                  </div>
-                  <div className="mt-2 border-l-4 border-primary pl-3">
-                    <p className="text-sm text-foreground">
-                      Ladies! Who would like to nominate a cookbook recipe to cook
-                      and share this week? Potluck recipes we want to cook from a
-                      shelved cookbook&bull;&bull;
-                    </p>
-                  </div>
-                  <div className="mt-2 flex items-center gap-4 text-xs text-muted-foreground">
-                    <span>2 Likes</span>
-                    <span>1 Comment</span>
-                  </div>
-                </div>
-
-                {/* Post 3 */}
-                <div className="rounded-lg bg-background p-4">
-                  <div className="flex items-center gap-2">
-                    <div className="h-6 w-6 rounded-full bg-muted" />
-                    <p className="text-sm">
-                      <span className="font-medium">Eric P.</span>
-                      {" posted in "}
-                      <span className="font-medium text-primary">
-                        Bear Down Parlay
-                      </span>
-                    </p>
-                  </div>
-                  <div className="mt-2 border-l-4 border-primary pl-3">
-                    <p className="text-sm text-foreground">
-                      Alright everyone - hit me with a lay
-                    </p>
-                  </div>
-                  <div className="mt-2 flex items-center gap-4 text-xs text-muted-foreground">
-                    <span>2 Likes</span>
-                    <span>5 Comments</span>
-                  </div>
+                <div className="overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/usc.jpg"
+                    alt="Voro U. posting in USC Founding Members"
+                    width={800}
+                    height={200}
+                    className="w-full object-cover"
+                  />
                 </div>
               </div>
-            </CardContent>
+            </div>
+            <div className="pointer-events-none absolute inset-0 z-0 rounded-xl" style={{ background: "radial-gradient(ellipse 90% 80% at 50% 50%, var(--background) 0%, var(--background) 32%, white 100%)" }} />
           </Card>
           </TiltCard>
         </div>
