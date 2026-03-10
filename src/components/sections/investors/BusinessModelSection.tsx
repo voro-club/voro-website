@@ -218,21 +218,23 @@ export function BusinessModelSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="mb-8 grid items-center gap-12 rounded-[20px] bg-foreground p-10 md:grid-cols-2">
+          <div className="mb-8 grid items-center gap-8 rounded-[20px] bg-foreground p-7 md:gap-12 md:p-10 md:grid-cols-2">
             <p className="text-xl font-bold leading-relaxed text-white">
-              Free to join.{" "}
+              Free to join.
+              <br className="md:hidden" />
+              <span className="hidden md:inline">{" "}</span>
               <strong className="text-accent-bright">
                 Revenue follows density.
               </strong>
             </p>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2 md:gap-3">
               {pillars.map((p) => (
                 <div
                   key={p.label}
-                  className="rounded-[14px] bg-white/7 px-3 py-5 text-center"
+                  className="rounded-[14px] bg-white/7 px-2 py-4 text-center md:px-3 md:py-5"
                 >
-                  <span className="mb-2.5 block text-[26px]">{p.icon}</span>
-                  <span className="text-[11px] font-bold uppercase leading-snug tracking-[0.5px] text-accent-bright">
+                  <span className="mb-2 block text-[22px] md:mb-2.5 md:text-[26px]">{p.icon}</span>
+                  <span className="text-[10px] font-bold uppercase leading-snug tracking-[0.3px] text-accent-bright md:text-[11px] md:tracking-[0.5px]">
                     {p.label}
                   </span>
                 </div>
