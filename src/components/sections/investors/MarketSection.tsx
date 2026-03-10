@@ -399,13 +399,13 @@ export function MarketSection() {
               {activeTab === tab.id && (
                 <div className="animate-[tabFadeIn_0.25s_ease]">
                   {tab.id === "tam" && (
-                    <div className="mb-6 text-center">
+                    <div className="mx-auto mb-6 max-w-[1100px] overflow-hidden">
                       <Image
-                        src="/images/VORO_TAM.png"
+                        src="/images/Voro_TAM.svg"
                         alt="Voro TAM — three overlapping markets totaling $70B+"
-                        width={1200}
-                        height={600}
-                        className="mx-auto w-full max-w-[700px] rounded-2xl"
+                        width={1440}
+                        height={810}
+                        className="mx-auto w-full scale-[1.55]"
                       />
                     </div>
                   )}
