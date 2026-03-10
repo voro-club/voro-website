@@ -27,7 +27,7 @@ const nowCards: BmCard[] = [
     title: "Browse, join, and attend free events at no cost.",
     stats: [
       { value: "$0", label: "to join any club or attend free events" },
-      { value: "∞", label: "clubs to explore, no credit card required" },
+      { value: "infinity", label: "clubs to explore, no credit card required" },
     ],
     note: "Free access is the growth engine. Density first.",
   },
@@ -159,24 +159,41 @@ const tabs = [
 function BmCardView({ card }: { card: BmCard }) {
   return (
     <div className="rounded-[18px] border border-black/7 bg-white p-7">
-      <p className="mb-2 text-[10px] font-bold uppercase tracking-[1.5px] text-[#008199]/75">
+      <p className="mb-2 text-xs font-bold uppercase tracking-[1.5px] text-[#008199]/75">
         {card.cardLabel}
       </p>
-      <h4 className="mb-3 text-[17px] font-extrabold leading-snug text-foreground">
+      <h4 className="mb-3 text-xl font-extrabold leading-snug text-foreground">
         {card.title}
       </h4>
-      <div className="mt-3.5 grid grid-cols-[auto_1fr] gap-x-3.5 gap-y-1">
+      <div className="mt-3.5 grid grid-cols-[auto_1fr] gap-x-3.5 gap-y-1.5">
         {card.stats.map((s, i) => (
           <Fragment key={i}>
-            <span className="text-base font-black text-primary">{s.value}</span>
-            <span className="self-center text-xs text-muted-foreground">
+            <span className="text-lg font-black text-primary">
+              {s.value === "infinity" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="inline-block h-5 w-5"
+                >
+                  <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z" />
+                </svg>
+              ) : (
+                s.value
+              )}
+            </span>
+            <span className="self-center text-sm text-muted-foreground">
               {s.label}
             </span>
           </Fragment>
         ))}
       </div>
       {card.note && (
-        <p className="mt-3.5 border-t border-black/6 pt-3 text-xs italic leading-relaxed text-muted-foreground">
+        <p className="mt-3.5 border-t border-black/6 pt-3 text-sm italic leading-relaxed text-muted-foreground">
           {card.note}
         </p>
       )}

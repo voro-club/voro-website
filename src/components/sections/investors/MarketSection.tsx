@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useState } from "react";
+import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 interface AssumptionRow {
@@ -257,7 +258,7 @@ function MarketCard({
         {card.num}
       </div>
       <p
-        className={`text-sm leading-relaxed ${
+        className={`text-base leading-relaxed ${
           card.dark ? "text-white/75" : "text-muted-foreground"
         }`}
       >
@@ -268,48 +269,83 @@ function MarketCard({
         <>
           <button
             onClick={onToggle}
-            className="mt-4 cursor-pointer rounded-full border border-primary px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.5px] text-primary transition-all hover:bg-primary hover:text-white"
+            className="mt-4 cursor-pointer rounded-full border border-primary px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.5px] text-primary transition-all hover:bg-primary hover:text-white"
           >
             {expanded ? "Hide assumptions ↑" : "See assumptions ↓"}
           </button>
 
-          {expanded && (
-            <div className="mt-4 border-t border-primary/20 pt-4">
-              {card.assumptions.title && (
-                <p className="mb-2 text-[11px] font-bold uppercase tracking-[1px] text-[#008199]/75">
-                  {card.assumptions.title}
-                </p>
-              )}
-              {card.assumptions.rows.map((row, i) => (
-                <div
-                  key={i}
-                  className="flex items-baseline justify-between gap-3 border-b border-primary/10 py-1.5 last:border-b-0"
-                >
-                  <span className="text-xs text-muted-foreground">
-                    {row.label}
-                  </span>
-                  <span className="shrink-0 text-xs font-bold text-primary">
-                    {row.value}
-                  </span>
-                </div>
-              ))}
-              {card.assumptions.total && (
-                <div className="mt-3 flex items-center justify-between rounded-[10px] bg-background px-3.5 py-2.5">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.5px] text-muted-foreground">
-                    {card.assumptions.total.label}
-                  </span>
-                  <span className="text-base font-black text-primary">
-                    {card.assumptions.total.value}
-                  </span>
-                </div>
-              )}
-              {card.assumptions.note && (
-                <p className="mt-2.5 text-[11px] italic text-muted-foreground">
-                  {card.assumptions.note}
-                </p>
-              )}
+          <div
+            className="grid transition-[grid-template-rows] duration-350 ease-out"
+            style={{
+              gridTemplateRows: expanded ? "1fr" : "0fr",
+            }}
+          >
+            <div className="overflow-hidden">
+              <div className="mt-4 border-t border-primary/20 pt-4">
+                {card.assumptions.title && (
+                  <p
+                    className="mb-2 text-xs font-bold uppercase tracking-[1px] text-[#008199]/75 transition-all duration-300"
+                    style={{
+                      opacity: expanded ? 1 : 0,
+                      transform: expanded ? "translateY(0)" : "translateY(-6px)",
+                    }}
+                  >
+                    {card.assumptions.title}
+                  </p>
+                )}
+                {card.assumptions.rows.map((row, i) => (
+                  <div
+                    key={i}
+                    className="flex items-baseline justify-between gap-3 border-b border-primary/10 py-1.5 transition-all duration-300 last:border-b-0"
+                    style={{
+                      opacity: expanded ? 1 : 0,
+                      transform: expanded ? "translateY(0)" : "translateY(8px)",
+                      transitionDelay: expanded ? `${(i + 1) * 50}ms` : "0ms",
+                    }}
+                  >
+                    <span className="text-sm text-muted-foreground">
+                      {row.label}
+                    </span>
+                    <span className="shrink-0 text-sm font-bold text-primary">
+                      {row.value}
+                    </span>
+                  </div>
+                ))}
+                {card.assumptions.total && (
+                  <div
+                    className="mt-3 flex items-center justify-between rounded-[10px] bg-background px-3.5 py-2.5 transition-all duration-300"
+                    style={{
+                      opacity: expanded ? 1 : 0,
+                      transform: expanded ? "translateY(0)" : "translateY(8px)",
+                      transitionDelay: expanded
+                        ? `${(card.assumptions.rows.length + 1) * 50}ms`
+                        : "0ms",
+                    }}
+                  >
+                    <span className="text-xs font-bold uppercase tracking-[0.5px] text-muted-foreground">
+                      {card.assumptions.total.label}
+                    </span>
+                    <span className="text-lg font-black text-primary">
+                      {card.assumptions.total.value}
+                    </span>
+                  </div>
+                )}
+                {card.assumptions.note && (
+                  <p
+                    className="mt-2.5 text-xs italic text-muted-foreground transition-all duration-300"
+                    style={{
+                      opacity: expanded ? 1 : 0,
+                      transitionDelay: expanded
+                        ? `${(card.assumptions.rows.length + 2) * 50}ms`
+                        : "0ms",
+                    }}
+                  >
+                    {card.assumptions.note}
+                  </p>
+                )}
+              </div>
             </div>
-          )}
+          </div>
         </>
       )}
     </div>
@@ -362,6 +398,17 @@ export function MarketSection() {
             <Fragment key={tab.id}>
               {activeTab === tab.id && (
                 <div className="animate-[tabFadeIn_0.25s_ease]">
+                  {tab.id === "tam" && (
+                    <div className="mb-6 text-center">
+                      <Image
+                        src="/images/VORO_TAM.png"
+                        alt="Voro TAM — three overlapping markets totaling $70B+"
+                        width={1200}
+                        height={600}
+                        className="mx-auto w-full max-w-[700px] rounded-2xl"
+                      />
+                    </div>
+                  )}
                   <div className="grid gap-6 md:grid-cols-3">
                     {tab.cards.map((card) => (
                       <MarketCard
