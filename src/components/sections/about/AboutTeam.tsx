@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { TiltCard } from "@/components/ui/tilt-card";
 
@@ -11,6 +12,7 @@ const team = [
     emoji: "👩🏻",
     image: "/images/courtney.jpeg",
     imagePosition: "object-[center_30%]",
+    linkedin: "https://www.linkedin.com/in/courtneygcaruso/",
   },
   {
     name: "Holly Smith",
@@ -19,6 +21,7 @@ const team = [
     tag: "Voice of Reason",
     emoji: "👩🏼",
     image: "/images/holly.png",
+    linkedin: "https://www.linkedin.com/in/hollyhsmith/",
   },
   {
     name: "Nate Dereb",
@@ -28,6 +31,7 @@ const team = [
     emoji: "👨🏿",
     image: "/images/nate.jpg",
     imagePosition: "object-[center_30%]",
+    linkedin: "https://www.linkedin.com/in/nathenaeldereb/",
   },
   {
     name: "Chris Chifor",
@@ -38,6 +42,7 @@ const team = [
     image: "/images/chris.jpeg",
     imagePosition: "object-[60%_30%]",
     imageScale: "scale-[1.6] translate-y-[8%]",
+    linkedin: "https://www.linkedin.com/in/christopher-chifor/",
   },
 ];
 
@@ -66,19 +71,46 @@ export function AboutTeam() {
               <TiltCard className="h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-black/7">
                   <div className="relative aspect-square w-full shrink-0 overflow-hidden bg-linear-to-br from-accent-mid/10 to-accent-bright/20">
-                    {"image" in member && member.image ? (
-                      <div className={`absolute inset-0 ${"imageScale" in member && member.imageScale ? member.imageScale : ""}`}>
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className={`object-cover ${"imagePosition" in member && member.imagePosition ? member.imagePosition : "object-top"}`}
-                        />
-                      </div>
+                    {"linkedin" in member && member.linkedin ? (
+                      <Link
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block h-full w-full cursor-pointer transition-opacity hover:opacity-90"
+                        aria-label={`${member.name} on LinkedIn`}
+                      >
+                        {"image" in member && member.image ? (
+                          <div className={`absolute inset-0 ${"imageScale" in member && member.imageScale ? member.imageScale : ""}`}>
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className={`object-cover ${"imagePosition" in member && member.imagePosition ? member.imagePosition : "object-top"}`}
+                            />
+                          </div>
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-[64px]">
+                            {member.emoji}
+                          </div>
+                        )}
+                      </Link>
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-[64px]">
-                        {member.emoji}
-                      </div>
+                      <>
+                        {"image" in member && member.image ? (
+                          <div className={`absolute inset-0 ${"imageScale" in member && member.imageScale ? member.imageScale : ""}`}>
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className={`object-cover ${"imagePosition" in member && member.imagePosition ? member.imagePosition : "object-top"}`}
+                            />
+                          </div>
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-[64px]">
+                            {member.emoji}
+                          </div>
+                        )}
+                      </>
                     )}
                   </div>
                   <div className="flex min-h-[260px] min-w-0 flex-1 flex-col p-7">

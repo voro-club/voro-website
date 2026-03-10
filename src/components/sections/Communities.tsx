@@ -18,11 +18,14 @@ export function Communities() {
         <div className="grid gap-6 md:grid-cols-2">
           {/* Community photo card */}
           <TiltCard className="h-full">
-          <Card className="h-full overflow-hidden rounded-xl border-0 shadow-sm">
-            <div className="aspect-16/10 w-full bg-muted/30">
-              <div className="flex h-full w-full items-center justify-center text-sm text-muted-foreground">
-                Swim &amp; Social Photo
-              </div>
+          <Card className="h-full overflow-hidden rounded-xl border-0 pt-0 shadow-sm">
+            <div className="relative aspect-16/10 w-full overflow-hidden bg-muted/30">
+              <Image
+                src="/images/swimandsocial.jpeg"
+                alt="Swim & Social — LA-based open water swim + social club"
+                fill
+                className="object-cover object-bottom"
+              />
             </div>
             <CardContent className="pt-4">
               <h3 className="text-xl font-semibold">Swim &amp; Social</h3>
@@ -36,11 +39,20 @@ export function Communities() {
           {/* Feed posts card */}
           <TiltCard className="h-full">
           <Card className="relative h-full min-h-[420px] overflow-hidden rounded-xl border-0 shadow-sm md:min-h-0">
-            <h3 className="relative z-10 px-6 pt-4 text-xl font-semibold">
+            <h3 className="relative z-20 px-6 pt-2 text-xl font-semibold">
               Already organizing in real life
             </h3>
-            <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
-              <div className="w-full space-y-4">
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pt-12">
+              <div className="w-full max-w-[94%] space-y-4">
+                <div className="overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/morgan.jpeg"
+                    alt="Morgan posting in community"
+                    width={800}
+                    height={200}
+                    className="w-full object-cover"
+                  />
+                </div>
                 <div className="overflow-hidden rounded-lg">
                   <Image
                     src="/images/kai.jpeg"

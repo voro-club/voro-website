@@ -31,7 +31,7 @@ const features = [
     description:
       "Clubs have live feeds of real-world plans \u2014 casual hangs, hosted events, group meetups. Everything in one place.",
     imagePlaceholder: "Club Feed Screenshot",
-    images: null,
+    images: [{ src: "/images/uscfm.jpeg", alt: "USC Founding Members club — see what's happening and show up" }],
   },
 ];
 
