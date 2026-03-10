@@ -27,7 +27,7 @@ const team = [
     name: "Nate Dereb",
     role: "Founding Technical Partner",
     bio: "7+ years of software engineering experience, including 5+ years at Adobe. Specializes in AI-powered analytics and scalable product engineering. Built LLM-driven insight tools and consumer apps with 170k+ combined users.",
-    tag: "Forever Unbothered",
+    tag: "Forever Curious",
     emoji: "👨🏿",
     image: "/images/nate.jpg",
     imagePosition: "object-[center_30%]",
