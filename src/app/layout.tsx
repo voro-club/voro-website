@@ -72,7 +72,7 @@ export const metadata: Metadata = {
       "Meet new people through interest-based clubs, group profiles with your friends, and in-person events. Live in Los Angeles and Denver.",
     images: [
       {
-        url: "/images/voro.svg",
+        url: "/images/VORO_SOLO.png",
         alt: "Voro — Expand Your Circle",
       },
     ],
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "Voro — Expand Your Circle",
     description:
       "Meet new people through interest-based clubs, group profiles with your friends, and in-person events.",
-    images: ["/images/voro.svg"],
+    images: ["/images/VORO_SOLO.png"],
   },
   alternates: {
     canonical: SITE_URL,
