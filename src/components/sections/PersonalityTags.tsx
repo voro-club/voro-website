@@ -235,8 +235,8 @@ export function PersonalityTags() {
           Your type of people. Already here.
         </h2>
         <p className="mx-auto mt-8 max-w-[745px] text-center text-[25px] font-semibold leading-[100%] tracking-normal text-[#008199]/75">
-          Pick your tags - and let your friends tag you too.
-          <span className="mt-2 block">Because sometimes your friends describe you better than you do.</span>
+          Sometimes your friends describe you better than you do.
+          <span className="mt-2 block">Pick your tags - and let them weigh in.</span>
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">

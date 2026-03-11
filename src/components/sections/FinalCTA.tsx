@@ -7,11 +7,11 @@ export function FinalCTA() {
         <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl">
           With your people. Not alone.
         </h2>
-        <p className="mx-auto mt-8 max-w-[760px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">
-          Meet new people through Clubs and Circles — and actually show up.
+        <p className="mx-auto mt-8 max-w-[760px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75 md:leading-[1.5]">
+          The people are already here. The plans are being made. All you have to do is show up.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-6">
           <Button
             asChild
             className="h-12 w-[195px] rounded-[12px] border border-[#F4EFE8] bg-[#008199] px-[40px] py-[11px] text-base font-medium text-white shadow-[0_5px_5px_0_rgba(0,0,0,0.5)] hover:bg-[#006d82]"
@@ -20,8 +20,8 @@ export function FinalCTA() {
           </Button>
         </div>
 
-        <p className="mx-auto mt-6 max-w-[462px] text-center text-[20px] font-normal leading-[24px] tracking-normal text-[#000000]">
-          Now live in Los Angeles. Expanding nationwide soon.
+        <p className="mx-auto mt-10 max-w-[462px] text-center text-[20px] font-normal leading-[24px] tracking-normal text-[#000000]">
+          Now live in Los Angeles. More cities coming.
         </p>
       </div>
     </section>

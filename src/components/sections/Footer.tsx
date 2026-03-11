@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CONTACT_EMAIL = "contact@voroapp.com";
+const CONTACT_EMAIL = "hello@voro.club";
 
 export function Footer() {
   const [copied, setCopied] = useState(false);

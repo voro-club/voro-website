@@ -11,15 +11,15 @@ const features = [
     title: "Explore Clubs",
     subtitle: "Start with what you're into.",
     description:
-      "Clubs organize the communities that already exist \u2014 hiking, nightlife, fitness, creativity, niche energy. Join solo and show up as yourself.",
+      "Clubs are the communities that already exist: hiking crews, fitness people, nightlife regulars, creative types. They just finally have a home. Join solo. Show up as yourself.",
     imagePlaceholder: "Explore Clubs Screenshot",
     images: [{ src: "/images/explore.png", alt: "Explore clubs screen" }],
   },
   {
-    title: "Connect solo \u2014 or with your friends.",
-    subtitle: "Connect solo \u2014 or with your friends.",
+    title: "Bring your friends - or come solo.",
+    subtitle: "Bring your friends - or come solo.",
     description:
-      "A Circle is a shared group profile (2\u20136 friends) who want to meet more people together. You can also swipe solo.",
+      "A Circle is your friend group on Voro - 2 to 6 people, one shared profile, looking to meet more people together. Less pressure. More fun. (Flying solo works too.)",
     imagePlaceholder: "Silverlake Sirens Screenshot",
     images: [
       { src: "/images/penelope.png", alt: "Penelope profile screen" },
@@ -30,7 +30,7 @@ const features = [
     title: "Club Feed",
     subtitle: "See what\u2019s happening and show up.",
     description:
-      "Clubs have live feeds of real-world plans \u2014 casual hangs, hosted events, group meetups. Everything in one place.",
+      "Every Club has a live feed of what's actually happening - casual hangs, hosted events, spontaneous plans. No more \"what are you doing this weekend?\" with no answer.",
     imagePlaceholder: "Club Feed Screenshot",
     images: [{ src: "/images/uscfm.jpeg", alt: "USC Founding Members club \u2014 see what's happening and show up" }],
   },
@@ -128,13 +128,13 @@ export function HowItWorks() {
 
   return (
     <>
-      <section id="how-it-works" aria-label="How Voro works" className="px-6 py-16 md:px-12 lg:px-20 lg:py-24">
+      <section id="how-it-works" aria-label="How it works" className="px-6 py-16 md:px-12 lg:px-20 lg:py-24">
         <ScrollReveal>
           <div className="mx-auto max-w-[90rem]">
             <div className="mb-14 text-center">
-              <h2 className="text-4xl font-bold md:text-5xl">How Voro Works</h2>
+              <h2 className="text-4xl font-bold md:text-5xl">How It Works</h2>
               <p className="mt-8 text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">
-                Online discovery → real-life connection.
+                Find people who are actually into what you're into. Then show up.
               </p>
             </div>
 

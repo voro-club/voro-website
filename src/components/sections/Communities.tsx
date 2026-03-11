@@ -8,10 +8,10 @@ export function Communities() {
       <div className="mx-auto max-w-[90rem]">
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-bold md:text-5xl">
-            Built with real communities.
+            Already happening in LA.
           </h2>
-          <p className="mx-auto mt-8 max-w-[686px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">
-            Local clubs and friend groups are already organizing on Voro.
+          <p className="mx-auto mt-8 max-w-[686px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75 md:leading-[1.5]">
+            These aren&apos;t test groups. These are real communities, and they&apos;re meeting in person.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export function Communities() {
             <CardContent className="pt-4">
               <h3 className="text-xl font-semibold">Swim &amp; Social</h3>
               <p className="mt-1 text-sm text-muted-foreground">
-                LA-based open water swim + social club.
+                Ocean swims. New friends. Every week in LA.
               </p>
             </CardContent>
           </Card>
@@ -40,7 +40,7 @@ export function Communities() {
           <TiltCard className="h-full">
           <Card className="relative h-full min-h-[420px] overflow-hidden rounded-xl border-0 shadow-sm md:min-h-0">
             <h3 className="relative z-20 px-6 pt-2 text-xl font-semibold">
-              Already organizing in real life
+              What's happening this week
             </h3>
             <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pt-12">
               <div className="w-full max-w-[94%] space-y-4">
@@ -74,7 +74,6 @@ export function Communities() {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-0 z-0 rounded-xl" style={{ background: "radial-gradient(ellipse 90% 80% at 50% 50%, var(--background) 0%, var(--background) 32%, white 100%)" }} />
           </Card>
           </TiltCard>
         </div>

@@ -45,8 +45,10 @@ export function Hero() {
               maxWidth: "586px",
             }}
           >
-            Meet new people through interest-based clubs, group profiles with
-            your friends, and in-person events.
+            Less pressure. More people. Fewer awkward DMs.
+          </p>
+          <p className="mt-2 text-center font-normal text-primary/90" style={{ fontSize: "16px", lineHeight: "24px" }}>
+            Clubs. Circles. In-person events. All in one place.
           </p>
 
           <div className="mt-8 flex w-full flex-col items-center gap-3">
@@ -72,7 +74,7 @@ export function Hero() {
               letterSpacing: "0%",
             }}
           >
-            Now live in Los Angeles and Denver.
+            Now live in Los Angeles. More cities coming.
           </p>
         </div>
 
