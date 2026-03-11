@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   description:
     "Voro is a group-first social platform turning online discovery into in-person connection through Clubs, Circles, and Events.",
   robots: { index: false, follow: false },
+  openGraph: {
+    images: [{ url: "/images/voro.svg", alt: "Voro" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/voro.svg"],
+  },
 };
 
 function SectionDivider() {

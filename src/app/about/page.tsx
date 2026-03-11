@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     description:
       "Meet the team behind Voro — a group-first social discovery app built from the shared experience of moving somewhere new and wanting in-person connection.",
     url: "https://voroapp.com/about",
+    images: [{ url: "/images/voro.svg", alt: "Voro" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/voro.svg"],
   },
 };
 
