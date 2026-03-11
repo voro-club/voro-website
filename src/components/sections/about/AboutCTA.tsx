@@ -13,7 +13,7 @@ export function AboutCTA() {
           Expand your Circle.
         </h2>
         <p className="mx-auto mt-8 max-w-[760px] text-center text-[25px] font-medium leading-[100%] tracking-normal text-[#008199]/75">
-          Now live in Los Angeles and Denver. More cities coming soon.
+          Now live in Los Angeles. More cities coming.
         </p>
         <a
           href={APP_STORE_URL}
