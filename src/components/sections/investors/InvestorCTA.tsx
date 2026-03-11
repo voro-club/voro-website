@@ -17,11 +17,11 @@ export function InvestorCTA() {
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3.5">
           <a
-            href="mailto:hello@voro.club"
+            href="mailto:courtney@voro.club"
             className="inline-flex items-center gap-2.5 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-primary/85"
           >
             <span>&#9993;</span>
-            hello@voro.club
+            courtney@voro.club
           </a>
         </div>
       </ScrollReveal>
