@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Voro",
   },
   description:
-    "Voro is the social discovery app for meeting new people through interest-based clubs, group profiles with friends (Circles), and real-life events. Live in Los Angeles and Denver.",
+    "Voro is the social discovery app for meeting new people through interest-based clubs, group profiles with friends (Circles), and real-life events.",
   keywords: [
     "Voro",
     "social app",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "Voro",
     title: "Voro — Expand Your Circle | Meet People Through Clubs & Events",
     description:
-      "Meet new people through interest-based clubs, group profiles with your friends, and in-person events. Live in Los Angeles and Denver.",
+      "Meet new people through interest-based clubs, group profiles with your friends, and in-person events.",
     images: [
       {
         url: "/images/VORO_SOLO.png",
