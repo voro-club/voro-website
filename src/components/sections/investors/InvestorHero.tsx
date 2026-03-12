@@ -36,7 +36,7 @@ export function InvestorHero() {
               Investor &amp; Partner Overview
             </span>
             <h1 className="mb-6 text-[clamp(32px,6vw,68px)] leading-[1.2] font-extrabold text-white">
-              Building the social layer for real life.
+              Building the social layer for in-person.
             </h1>
             <p className="mb-10 max-w-[560px] text-lg leading-[1.75] font-light text-white/85">
               Voro is a group-first social platform turning online discovery into

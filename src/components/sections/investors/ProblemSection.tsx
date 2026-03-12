@@ -88,7 +88,7 @@ function CompetitorBox() {
         ))}
       </ul>
       <div
-        className="mt-5 flex items-start gap-3.5 rounded-xl border border-white/25 bg-white/12 px-5 py-4 text-base leading-[1.5] text-white transition-all duration-400"
+        className="mt-5 flex items-center gap-3.5 rounded-xl border border-white/25 bg-white/12 px-5 py-4 text-base leading-[1.5] text-white transition-all duration-400"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(8px)",
@@ -100,7 +100,7 @@ function CompetitorBox() {
           alt="Voro"
           width={28}
           height={28}
-          className="mt-0.5 shrink-0"
+          className="shrink-0 brightness-0 invert"
         />
         <span>
           <strong className="font-bold">Voro</strong> is the first platform to

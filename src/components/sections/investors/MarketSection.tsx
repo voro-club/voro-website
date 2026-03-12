@@ -373,7 +373,7 @@ export function MarketSection() {
             Market Size
           </p>
           <h2 className="mb-8 text-4xl font-extrabold text-foreground md:text-5xl">
-            Two large markets. One platform at the intersection of both.
+            Three markets. One platform at the intersection of all.
           </h2>
         </ScrollReveal>
 
