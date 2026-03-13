@@ -96,11 +96,11 @@ function CompetitorBox() {
         }}
       >
         <Image
-          src="/images/voro.svg"
+          src="/images/logo.svg"
           alt="Voro"
           width={28}
           height={28}
-          className="shrink-0 brightness-0 invert"
+          className="shrink-0"
         />
         <span>
           <strong className="font-bold">Voro</strong> is the first platform to
