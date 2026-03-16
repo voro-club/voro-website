@@ -12,6 +12,7 @@ const CONTACT_EMAIL = "hello@voro.club";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/investors", label: "Investors" },
   { href: `mailto:${CONTACT_EMAIL}`, label: "Contact", external: true },
 ];
 
