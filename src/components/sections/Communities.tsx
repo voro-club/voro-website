@@ -40,7 +40,7 @@ export function Communities() {
           <TiltCard className="h-full">
           <Card className="relative h-full min-h-[420px] overflow-hidden rounded-xl border-0 shadow-sm md:min-h-0">
             <h3 className="relative z-20 px-6 pt-2 text-xl font-semibold">
-              What's happening this week
+              What&apos;s happening this week
             </h3>
             <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pt-12">
               <div className="w-full max-w-[94%] space-y-4">

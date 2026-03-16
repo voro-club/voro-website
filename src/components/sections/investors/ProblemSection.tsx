@@ -96,7 +96,7 @@ function CompetitorBox() {
         }}
       >
         <Image
-          src="/images/logo.svg"
+          src="/images/voro.svg"
           alt="Voro"
           width={28}
           height={28}

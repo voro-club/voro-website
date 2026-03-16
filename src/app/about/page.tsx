@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   description:
     "Meet the team behind Voro — a group-first social discovery app built from the shared experience of moving somewhere new and wanting in-person connection.",
   alternates: {
-    canonical: "https://voroapp.com/about",
+    canonical: "https://www.voro.club/about",
   },
   openGraph: {
     title: "About Us | Voro",
     description:
       "Meet the team behind Voro — a group-first social discovery app built from the shared experience of moving somewhere new and wanting in-person connection.",
-    url: "https://voroapp.com/about",
-    images: [{ url: "/images/VORO_SOLO.png", alt: "Voro" }],
+    url: "https://www.voro.club/about",
+    images: [{ url: "/images/voro-fav.png", alt: "Voro" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/VORO_SOLO.png"],
+    images: ["/images/voro-fav.png"],
   },
 };
 

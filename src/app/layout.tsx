@@ -8,7 +8,7 @@ const redHatDisplay = Red_Hat_Display({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-const SITE_URL = "https://voroapp.com";
+const SITE_URL = "https://www.voro.club";
 
 export const viewport: Viewport = {
   themeColor: "#065D6D",
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/logo.svg",
-    apple: "/images/logo.svg",
+    icon: "/images/voro-fav.png",
+    apple: "/images/voro-fav.png",
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
       "Meet new people through interest-based clubs, group profiles with your friends, and in-person events.",
     images: [
       {
-        url: "/images/VORO_SOLO.png",
+        url: "/images/voro-fav.png",
         alt: "Voro — Expand Your Circle",
       },
     ],
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "Voro — Expand Your Circle",
     description:
       "Meet new people through interest-based clubs, group profiles with your friends, and in-person events.",
-    images: ["/images/VORO_SOLO.png"],
+    images: ["/images/voro-fav.png"],
   },
   alternates: {
     canonical: SITE_URL,

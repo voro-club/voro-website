@@ -11,14 +11,14 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://voroapp.com/#organization",
+      "@id": "https://www.voro.club/#organization",
       name: "Voro, Co.",
-      url: "https://voroapp.com",
-      logo: "https://voroapp.com/images/logo.svg",
+      url: "https://www.voro.club",
+      logo: "https://www.voro.club/images/voro.svg",
       sameAs: [],
       contactPoint: {
         "@type": "ContactPoint",
-        email: "contact@voroapp.com",
+        email: "hello@voro.club",
         contactType: "customer support",
       },
       address: {
@@ -46,18 +46,18 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://voroapp.com/#website",
-      url: "https://voroapp.com",
+      "@id": "https://www.voro.club/#website",
+      url: "https://www.voro.club",
       name: "Voro",
-      publisher: { "@id": "https://voroapp.com/#organization" },
+      publisher: { "@id": "https://www.voro.club/#organization" },
     },
     {
       "@type": "WebPage",
-      "@id": "https://voroapp.com/#webpage",
-      url: "https://voroapp.com",
+      "@id": "https://www.voro.club/#webpage",
+      url: "https://www.voro.club",
       name: "Voro — Expand Your Circle | Meet People Through Clubs & Events",
-      isPartOf: { "@id": "https://voroapp.com/#website" },
-      about: { "@id": "https://voroapp.com/#organization" },
+      isPartOf: { "@id": "https://www.voro.club/#website" },
+      about: { "@id": "https://www.voro.club/#organization" },
       description:
         "Voro is the social discovery app for meeting new people through interest-based clubs, group profiles with friends (Circles), and real-life events.",
     },

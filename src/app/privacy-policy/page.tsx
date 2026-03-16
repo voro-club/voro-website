@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "How Voro collects, uses, shares, and protects your personal information. Learn about your data rights under CCPA/CPRA.",
   alternates: {
-    canonical: "https://voroapp.com/privacy-policy",
+    canonical: "https://www.voro.club/privacy-policy",
   },
   robots: {
     index: true,

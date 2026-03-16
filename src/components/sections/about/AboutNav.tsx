@@ -100,7 +100,7 @@ export function AboutNav() {
         </li>
         <li>
           <a
-            href="mailto:contact@voroapp.com"
+            href="mailto:hello@voro.club"
             className={`text-sm font-medium tracking-[0.3px] transition-colors ${
               scrolled
                 ? "text-muted-foreground hover:text-primary"

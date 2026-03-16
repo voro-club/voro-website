@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Terms and Conditions of Use for the Voro mobile application and related services. Read before using Voro.",
   alternates: {
-    canonical: "https://voroapp.com/terms-and-conditions",
+    canonical: "https://www.voro.club/terms-and-conditions",
   },
   robots: {
     index: true,
