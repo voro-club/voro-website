@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Red_Hat_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const redHatDisplay = Red_Hat_Display({
@@ -101,6 +102,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${redHatDisplay.variable} font-sans antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
