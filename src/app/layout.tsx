@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/voro-fav.png",
+    icon: "/favicon.ico",
     apple: "/images/voro-fav.png",
   },
   manifest: "/manifest.webmanifest",
