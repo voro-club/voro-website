@@ -32,7 +32,7 @@ const features = [
     description:
       "Every Club has a live feed of what's actually happening - casual hangs, hosted events, spontaneous plans. No more \"what are you doing this weekend?\" with no answer.",
     imagePlaceholder: "Club Feed Screenshot",
-    images: [{ src: "/images/uscfm.jpeg", alt: "USC Founding Members club \u2014 see what's happening and show up" }],
+    images: [{ src: "/images/realitea.png", alt: "RealiTEA Club \u2014 see what's happening and show up" }],
   },
 ];
 
